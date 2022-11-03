@@ -1,0 +1,30 @@
+--------------------------------------------------------------------------------
+Analyse des besoins en données du site Web du restaurant Leila
+--------------------------------------------------------------------------------
+On énumère les "entités" (ou "acteurs", ou "choses", ou "tables") et leurs 
+"caractéristiques" (ou "propriétés", ou "attributs", ou "champs").
+--------------------------------------------------------------------------------
+
+Entité "Catégorie"
+------------------
+* id : nombre entier (minuscule), obligatoire, généré automatiquement
+* nom : chaîne de caractères (100), obligatoire
+* type : énumération ('menu', 'vin'), obligatoire
+
+Entité "Plat"
+-------------
+* id : nombre entier (petit), obligatoire, généré automatiquement
+* nom : chaîne de caractères (150), obligatoire
+* description : chaîne de caractères (250), facultatif
+* portion : nombre entier (minuscule), obligatoire, valeur par défaut : 1
+* prix : décimal (999.99), obligatoire
+* catégorie : nombre entier, référence à "l'identifiant" d'une catégorie
+
+Entité "Vin"
+------------
+* id : nombre entier (petit), obligatoire, généré automatiquement
+* nom : chaîne de caractères (150), obligatoire
+* description : chaîne de caractères (250), facultatif
+* provenance : chaîne de caractères (50), obligatoire
+* prix : décimal (9999.99), obligatoire
+* catégorie : nombre entier, référence à "l'identifiant" d'une catégorie
