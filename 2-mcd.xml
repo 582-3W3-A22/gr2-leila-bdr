@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="143" y="223" name="categorie">
+</datatypes><table x="121" y="219" name="categorie">
 <row name="id" null="0" autoincrement="1">
 <datatype>TINYINT</datatype>
 </row>
@@ -51,7 +51,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="438" y="41" name="plat">
+<table x="509" y="32" name="plat">
 <row name="id" null="0" autoincrement="1">
 <datatype>SMALLINT</datatype>
 </row>
@@ -60,7 +60,7 @@
 </row>
 <row name="description" null="1" autoincrement="0">
 <datatype>VARCHAR(250)</datatype>
-</row>
+<default>NULL</default></row>
 <row name="portion" null="0" autoincrement="0">
 <datatype>TINYINT</datatype>
 <default>1</default></row>
@@ -69,6 +69,7 @@
 </row>
 <row name="categorie_id" null="0" autoincrement="0">
 <datatype>TINYINT</datatype>
+<relation table="categorie" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
@@ -83,7 +84,7 @@
 </row>
 <row name="description" null="1" autoincrement="0">
 <datatype>VARCHAR(250)</datatype>
-</row>
+<default>NULL</default></row>
 <row name="provenance" null="0" autoincrement="0">
 <datatype>VARCHAR(50)</datatype>
 </row>
@@ -92,6 +93,7 @@
 </row>
 <row name="categorie_id" null="0" autoincrement="0">
 <datatype>TINYINT</datatype>
+<relation table="categorie" row="id" />
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
