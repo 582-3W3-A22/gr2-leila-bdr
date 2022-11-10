@@ -1,15 +1,15 @@
+-- CRÉATION DE LA BD leila
+DROP DATABASE IF EXISTS leila;
+CREATE DATABASE leila;
+-- UTILISATION DE leila
+USE leila;
+
 -- ---
 -- Globals
 -- ---
 
 -- SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- SET FOREIGN_KEY_CHECKS=0;
-
--- CRÉATION DE LA BD leila
-DROP DATABASE IF EXISTS leila;
-CREATE DATABASE leila;
--- UTILISATION DE leila
-USE leila;
 
 -- ---
 -- Table 'categorie'
@@ -21,8 +21,9 @@ DROP TABLE IF EXISTS `categorie`;
 CREATE TABLE `categorie` (
   `id` TINYINT NOT NULL AUTO_INCREMENT,
   `nom` VARCHAR(100) NOT NULL,
-  `type` ENUM('menu','vin') NOT NULL,
-  PRIMARY KEY (`id`)
+  `type` ENUM('plat','vin') NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY (`nom`, `type`)
 );
 
 -- ---

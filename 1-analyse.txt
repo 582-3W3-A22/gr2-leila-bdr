@@ -10,6 +10,8 @@ Entité "Catégorie"
 * id : nombre entier (minuscule), obligatoire, généré automatiquement
 * nom : chaîne de caractères (100), obligatoire
 * type : énumération ('menu', 'vin'), obligatoire
+Clé primaire : id
+Clé unique : nom & type
 
 Entité "Plat"
 -------------
@@ -19,6 +21,8 @@ Entité "Plat"
 * portion : nombre entier (minuscule), obligatoire, valeur par défaut : 1
 * prix : décimal (999.99), obligatoire
 * catégorie : nombre entier, référence à "l'identifiant" d'une catégorie
+Clé primaire : id
+Clé étrangère : catégorie
 
 Entité "Vin"
 ------------
@@ -28,3 +32,5 @@ Entité "Vin"
 * provenance : chaîne de caractères (50), obligatoire
 * prix : décimal (9999.99), obligatoire
 * catégorie : nombre entier, référence à "l'identifiant" d'une catégorie
+Clé primaire : id
+Clé étrangère : catégorie

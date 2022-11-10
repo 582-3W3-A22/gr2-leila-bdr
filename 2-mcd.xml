@@ -37,7 +37,7 @@
 		<type label="SET" length="1" sql="SET" quote=""/>
 		<type label="Bit" length="0" sql="bit" quote=""/>
 	</group>
-</datatypes><table x="121" y="219" name="categorie">
+</datatypes><table x="118" y="228" name="categorie">
 <row name="id" null="0" autoincrement="1">
 <datatype>TINYINT</datatype>
 </row>
@@ -45,13 +45,17 @@
 <datatype>VARCHAR(100)</datatype>
 </row>
 <row name="type" null="0" autoincrement="0">
-<datatype>ENUM('menu','vin')</datatype>
+<datatype>ENUM('plat','vin')</datatype>
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
+<key type="UNIQUE" name="">
+<part>nom</part>
+<part>type</part>
+</key>
 </table>
-<table x="509" y="32" name="plat">
+<table x="425" y="29" name="plat">
 <row name="id" null="0" autoincrement="1">
 <datatype>SMALLINT</datatype>
 </row>
@@ -75,7 +79,7 @@
 <part>id</part>
 </key>
 </table>
-<table x="497" y="322" name="vin">
+<table x="522" y="297" name="vin">
 <row name="id" null="0" autoincrement="1">
 <datatype>SMALLINT</datatype>
 </row>
