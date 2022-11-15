@@ -11,6 +11,8 @@
     <?php
         // Étape 1 : se connecter au serveur MySQL
         $cnx = mysqli_connect('localhost', 'root', '');
+        // Étape 1 (bis) : spécifier l'encodage de caractères
+        mysqli_set_charset($cnx, 'utf8');
         
         // Étape 2 : sélectionner la BD 'leila' (USE)
         mysqli_select_db($cnx, 'leila');

@@ -55,7 +55,7 @@
 <part>type</part>
 </key>
 </table>
-<table x="425" y="29" name="plat">
+<table x="453" y="33" name="plat">
 <row name="id" null="0" autoincrement="1">
 <datatype>SMALLINT</datatype>
 </row>
@@ -78,8 +78,12 @@
 <key type="PRIMARY" name="">
 <part>id</part>
 </key>
+<key type="UNIQUE" name="">
+<part>nom</part>
+<part>categorie_id</part>
+</key>
 </table>
-<table x="522" y="297" name="vin">
+<table x="506" y="323" name="vin">
 <row name="id" null="0" autoincrement="1">
 <datatype>SMALLINT</datatype>
 </row>
@@ -101,6 +105,11 @@
 </row>
 <key type="PRIMARY" name="">
 <part>id</part>
+</key>
+<key type="UNIQUE" name="">
+<part>nom</part>
+<part>description</part>
+<part>categorie_id</part>
 </key>
 </table>
 </sql>
