@@ -1,16 +1,16 @@
 <?php
 // Script à exécuter une seule fois pour remplir la table 'plat' de la BD 'leila'
 
-// Connexion & sélection de BD
-$cnx = mysqli_connect('127.0.0.1', 'root', '', 'leila');
-// Encodage de caractères
-mysqli_set_charset($cnx, 'utf8');
-
 // Lire le contenu du menu dans le fichier JSON
 $platsJson = file_get_contents('data-json/menu-fr.json');
 // Obtenir un tableau PHP
 $platsTab = json_decode($platsJson, true);
 // print_r($platsTab);
+
+// Connexion & sélection de BD
+$cnx = mysqli_connect('127.0.0.1', 'root', '', 'leila');
+// Encodage de caractères
+mysqli_set_charset($cnx, 'utf8');
 
 foreach ($platsTab as $idCat => $plats) {
     foreach ($plats as $plat) {
